@@ -3,3 +3,13 @@ body {
     color: white;
     font-size: 10px;
 }
+
+nav {
+    height: 50px;
+    background-color: white;
+    color: black;
+}
+
+section {
+    height: 400px;
+}
