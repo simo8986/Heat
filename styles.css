@@ -1,15 +1,122 @@
 body {
-    background-color: black;
-    color: white;
-    font-size: 10px;
+background-color: black;
 }
 
-nav {
-    height: 50px;
+
+#grid div {
+    border: 1px solid white;
+    margin: 2px;
+    width: auto;
+    height: auto;
+}
+
+#grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr .3fr 1fr 3fr 1fr;
+    grid-template-areas:
+        "b b b"
+        "a a a"
+        "c d e"
+        "f f f"
+        "h h h";
+}
+
+#nav {
+    grid-area: a;
+    height: 10%;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    padding: 10px;
+}
+
+#nav a {
+    text-decoration: none;
+}
+
+#nav a:visited {
+    color: #fff;
+}
+
+#nav a:hover {
+    color: gray;
+}
+
+
+
+#banner {
+    grid-area: b;
+    font-family: 'Anton', sans-serif;
+    font-size: 80px;
     background-color: white;
     color: black;
+    text-align: center;
+    height: 20%;
 }
 
-section {
-    height: 400px;
+#nutramino {
+    left: 0%;
+    top: 0%;
+    position: 
+}
+
+.choosecan {
+    
+}
+
+#greencan {
+    grid-area: c;
+    background-image: url("greencan.png");
+    background-repeat: no-repeat;
+}
+
+#orangecan {
+    grid-area: d;
+    background-image: url("orangecan.png");
+    background-repeat: no-repeat;
+}
+
+#purplecan {
+    grid-area: e;
+    background-image: url("purplecan.png");
+    background-repeat: no-repeat;
+}
+
+.billede1 {
+    grid-area: f;
+    background-image: url(groupcan.png);
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    max-width: 100%;
+    height: auto;
+}
+
+.billede2 {
+    grid-area: g;
+}
+
+.tekst1 {
+    grid-area: h;
+    background-color: white;
+    color: black !important;
+    font-family: 'Anton', sans-serif;
+    font-size: 80px;
+    text-align: center;
+}
+
+.tekst2 {
+    grid-area: i;
+}
+
+.break {
+    grid-area: j;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .billede1 {
+        background-attachment: scroll;
+    }
 }
