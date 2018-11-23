@@ -5,21 +5,47 @@
 		<title></title>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
-	<body>
+    <body>
     <div id="grid">
-        <div id="banner"><img id="nutramino" src="Nutramino.png"><a name="forside">HEAT</a></div>
-        <nav id="nav"><a href="#forside">FORSIDE</a></nav>
+        <div></div>
+        <nav id="nav">
+            <div id="menupunkter">
+                <a href="#forside">FORSIDE</a>
+                <a href="#produkt">produkt</a>
+                <a href="#forside">FORSIDE</a>
+                <a href="#produkt">produkt</a>
+                <a href="#forside">FORSIDE</a>
+                <a href="#produkt">produkt</a>
+            </div>
+           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+        <div id="banner"><a name="forside">HEAT</a><img id="nutramino" src="billeder/Nutramino.png"></div>
+        
+        <div id="greencan"><img src="billeder/greencan.png"></div>
+        <div id="purplecan"><img src="billeder/purplecan.png"></div>
+        <div id="orangecan"><img src="billeder/orangecan.png"></div>
     
-        <div id="greencan">Grøn dåse</div>
-        <div id="purplecan">Vælg en dåse</div>
-        <div id="orangecan">Vælg en dåse</div>
-    
-       <div class="billede1"></div>
+        <div class="billede1"></div>
         <div class="billede2"></div> 
         <div class="tekst1">#FEELTHEHEAT</div>
         <div class="tekst2"></div>
         <div class="break"></div>
     </div>
+        
+        <script>
+function myFunction() {
+  var x = document.getElementById("menupunkter");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+        
 	</body>
 </html>
