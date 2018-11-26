@@ -18,53 +18,6 @@
         "h h h"
         "g g g";
     }
-#nav {
-    
-    font-family: 'Anton', sans-serif;
-    font-size: 80px;
-    padding: 10px;
-    color: white;
-    background-color: #333;
-    position: fixed;
-    z-index: 2;
-    right: 0px;
-    }
-
-#nav #menupunkter {
-    display:none;
-    margin-top: 110px;
-    padding: 15px;
-}
-
-#nav a {
-        text-decoration: none;
-        color: white;
-        padding: 14px 16px;
-        display: block;
-}
-
-#nav a.icon {
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 80px;
-}
-
-
-#nav a:visited {
-    color: #fff;
-}
-
-.fa .fa-bars {
-    font-size: 40px;
-} 
-
-#nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
 
 #banner {
     grid-area: b;

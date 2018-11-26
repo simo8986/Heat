@@ -32,8 +32,8 @@ background-color: black;
     font-family: 'Anton', sans-serif;
     font-size: 80px;
     padding: 10px;
-    color: white;
-    background-color: #333;
+    color: black;
+    background-color: #fff;
     position: fixed;
     z-index: 2;
     right: 0px;
@@ -47,7 +47,7 @@ background-color: black;
 
 #nav a {
         text-decoration: none;
-        color: white;
+        color: black;
         padding: 14px 16px;
         display: block;
 }
@@ -59,24 +59,22 @@ background-color: black;
     right: 0;
     top: 0;
     font-size: 80px;
+    color: white;
 }
 
-
+#nav a.icon:visited {
+    color: white;
+}
 #nav a:visited {
-    color: #fff;
+    color: black;
 }
 
 .fa .fa-bars {
     font-size: 40px;
+    color: #fff;
 } 
 
 #nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.active {
-    background-color: beige;
     color: white;
 }
 
