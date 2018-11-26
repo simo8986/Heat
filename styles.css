@@ -99,6 +99,24 @@ background-color: black;
 #greencan {
     grid-area: c;
     text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+.collabsible {
+    z-index: 2;
+    position: absolute;
+}
+
+.active, .collabsible:hover {
+  background-color: #ccc;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
 }
 
 #orangecan {
@@ -135,7 +153,7 @@ background-color: black;
 }
 
 /* Til PC */
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 700px) {
     #grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -158,27 +176,45 @@ background-color: black;
         max-width: 100%;
         height: auto;
     }
-    
-    /*#nav {
+
+    #nav {
+        text-align: right;
         grid-area: a;
-        height: 10%;
         font-family: 'Anton', sans-serif;
         font-size: 30px;
         padding: 10px;
-        color: white;
-    } */
-
+        height: auto;
+        background-color: transparent;
+    }
+    
+    #nav a.icon {
+        display: none;
+    }
+    
     #nav a {
         text-decoration: none;
+         display: inline;
+        margin-top: 0px;
+        padding: 0px;
+        width: 100px;
+        color: #000;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
         
     }
+    
+    #nav #menupunkter {
+    display: inline;
+   
+}
 
     #nav a:visited {
-        color: #fff;
+        color: #000;
     }
 
     #nav a:hover {
         color: gray;
+        background-color: transparent;
         }
     
     .fa .fa-bars {
@@ -193,6 +229,6 @@ background-color: black;
         display: none;
     }
     
-    #nav #menupunkter {
+    .scriptknap {
         display: none;
     }

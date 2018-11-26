@@ -25,10 +25,15 @@
         </nav>
         <div id="banner"><a name="forside">HEAT</a><img id="nutramino" src="billeder/Nutramino.png"></div>
         
-        <div id="greencan"><img src="billeder/greencan.png"></div>
+        <div id="greencan"><img src="billeder/greencan.png"></div> 
         <div id="purplecan"><img src="billeder/purplecan.png"></div>
         <div id="orangecan"><img src="billeder/orangecan.png"></div>
     
+        <button class="collapsible">Klik</button>
+            <div class="content">
+              <p>Lorem ipsum...</p>
+            </div> 
+        
         <div class="billede1"></div>
         <div class="billede2"></div> 
         <div class="tekst1">#FEELTHEHEAT</div>
@@ -36,7 +41,9 @@
         <div class="break"></div>
     </div>
         
-        <script>
+        <script class="scriptknap">
+if (document.documentElement.clientWidth < 375) {
+
 function myFunction() {
   var x = document.getElementById("menupunkter");
   if (x.style.display === "block") {
@@ -45,7 +52,23 @@ function myFunction() {
     x.style.display = "block";
   }
 }
+}
 </script>
-        
+     <script>  
+        var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+        </script>                        
 	</body>
 </html>
