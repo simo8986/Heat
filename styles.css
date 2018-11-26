@@ -8,23 +8,24 @@ background-color: black;
 }
 
 /* Mobil version */
+
 #grid div {
-    width: auto;
+    width: 100%;
     height: auto;
-    padding-top: 0px;
-    padding-bottom: 0px;
     z-index: 1;
 }
 
 #grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 4fr 4fr .2fr;
+    grid-template-rows: 1fr 4fr 2fr 3fr  1fr 3fr;
     grid-template-areas:
         "b b b"
         "d c e"
+        "k k k"
         "f f f"
-        "h h h";
+        "h h h"
+        "g g g";
     }
 #nav {
     
@@ -104,22 +105,6 @@ background-color: black;
     position: relative;
 }
 
-.collabsible {
-    z-index: 2;
-    position: absolute;
-}
-
-.active, .collabsible:hover {
-  background-color: #ccc;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-
 #orangecan {
     grid-area: d;
     text-align: center;
@@ -140,6 +125,10 @@ background-color: black;
 
 .billede2 {
     grid-area: g;
+    background-image:url(billeder/steffen.jpg);
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
 }
 
 .tekst1 {
@@ -149,12 +138,27 @@ background-color: black;
     font-family: 'Anton', sans-serif;
     font-size: 80px;
     text-align: center;
-}
-
-.tekst2 {
-    grid-area: i;
+    padding-top: 20px;
 }
 
 .break {
     grid-area: j;
+}
+
+#collapstekst {
+    grid-area: k;
+    background-color: white;
+    color: black;
+    display: none;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    border: 3px solid black;
+}
+
+h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    margin: 0;
 }

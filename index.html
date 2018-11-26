@@ -26,12 +26,12 @@
             </a>
         </nav>
         <div id="banner"><a name="forside">HEAT</a><img id="nutramino" src="billeder/Nutramino.png"></div>
-        
-        <div id="greencan"><img src="billeder/greencan.png"></div> 
-        <div id="purplecan"><img src="billeder/purplecan.png"></div>
-        <div id="orangecan"><img src="billeder/orangecan.png"></div>
+        <div id="greencan"><img src="billeder/greencan.png" onclick="skiftInfo()"></div> 
+        <div id="purplecan"><img src="billeder/purplecan.png" onclick="skiftInfo()"></div>
+        <div id="orangecan"><img src="billeder/orangecan.png" onclick="skiftInfo()">
+        </div>
+        <div id="collapstekst"><h2>INDHOLD</h2> <br> <p>En helt masse info om alt muligt! </p></div>
     
- 
         
         <div class="billede1"></div>
         <div class="billede2"></div> 
@@ -50,6 +50,23 @@
       } else {
         x.style.display = "block";
       }
+    }
+    
+    function skiftInfo() {
+    var elemen = document.getElementById("collapstekst");
+   if(elemen.style.display=="none") {
+       
+       elemen.style.display="block";
+        let elem=document.getElementById("grid");
+        elem.style.gridTemplateRows= '1fr 4fr 2fr 3fr 1fr 3fr';
+        elem.style.gridTemplateAreas='"b b b" "d c e" "k k k" "f f f" "h h h" "g g g"';
+       } else {
+        let elemen=document.getElementById("collapstekst");
+        elemen.style.display="none";
+        let elem=document.getElementById("grid");
+        elem.style.gridTemplateRows= '1fr 4fr 3fr 1fr 3fr';
+        elem.style.gridTemplateAreas='"b b b" "d c e" "f f f" "h h h" "g g g"';
+       }
     }
     
 </script>   

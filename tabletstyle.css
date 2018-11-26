@@ -1,30 +1,22 @@
-html {
-    scroll-behavior: smooth;
-}
 
-body {
-background-color: black;
-    margin: 0px;
-}
-
-/* Mobil version */
+/* Tablet version */
 #grid div {
     width: auto;
     height: auto;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    
     z-index: 1;
 }
 
 #grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 4fr 4fr .2fr;
+    grid-template-rows: 1fr 4fr 3fr 1fr 3fr;
     grid-template-areas:
         "b b b"
         "d c e"
         "f f f"
-        "h h h";
+        "h h h"
+        "g g g";
     }
 #nav {
     
@@ -74,11 +66,6 @@ background-color: black;
     color: black;
 }
 
-.active {
-    background-color: beige;
-    color: white;
-}
-
 #banner {
     grid-area: b;
     font-family: 'Anton', sans-serif;
@@ -104,22 +91,6 @@ background-color: black;
     position: relative;
 }
 
-.collabsible {
-    z-index: 2;
-    position: absolute;
-}
-
-.active, .collabsible:hover {
-  background-color: #ccc;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-
 #orangecan {
     grid-area: d;
     text-align: center;
@@ -128,33 +99,12 @@ background-color: black;
 #purplecan {
     grid-area: e;
     text-align: center;
-
 }
 
-.billede1 {
-        grid-area: f;
-        background-image: url(billeder/groupcan.png);
-        background-repeat: no-repeat; 
-    
-    }
-
-.billede2 {
-    grid-area: g;
-}
-
-.tekst1 {
-    grid-area: h;
+#collapstekst {
+    grid-area: k;
     background-color: white;
-    color: black !important;
-    font-family: 'Anton', sans-serif;
-    font-size: 80px;
-    text-align: center;
-}
-
-.tekst2 {
-    grid-area: i;
-}
-
-.break {
-    grid-area: j;
+    color: black;
+    display: none;
+    height: auto;
 }
