@@ -4,6 +4,8 @@
 		<meta charset="UTF-8">
 		<title></title>
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 700px)" href="tabletstyle.css">
+        <link rel="stylesheet" type="text/css" media="screen and (min-width: 1000px)" href="pcstyle.css">
         <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
@@ -13,11 +15,11 @@
         <nav id="nav">
             <div id="menupunkter">
                 <a href="#forside">FORSIDE</a>
-                <a href="#produkt">produkt</a>
+                <a href="#produkt">PRODUKT</a>
                 <a href="#forside">FORSIDE</a>
-                <a href="#produkt">produkt</a>
+                <a href="#produkt">PRODUKT</a>
                 <a href="#forside">FORSIDE</a>
-                <a href="#produkt">produkt</a>
+                <a href="#produkt">PRODUKT</a>
             </div>
            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
@@ -29,46 +31,25 @@
         <div id="purplecan"><img src="billeder/purplecan.png"></div>
         <div id="orangecan"><img src="billeder/orangecan.png"></div>
     
-        <button class="collapsible">Klik</button>
-            <div class="content">
-              <p>Lorem ipsum...</p>
-            </div> 
+ 
         
         <div class="billede1"></div>
         <div class="billede2"></div> 
         <div class="tekst1">#FEELTHEHEAT</div>
         <div class="tekst2"></div>
         <div class="break"></div>
-    </div>
-        
-        <script class="scriptknap">
-if (document.documentElement.clientWidth < 375) {
-
-function myFunction() {
-  var x = document.getElementById("menupunkter");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-}
-</script>
-     <script>  
-        var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-        </script>                        
+    </div>            
 	</body>
 </html>
+
+<script class="scriptknap">
+    function myFunction() {
+      var x = document.getElementById("menupunkter");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    
+</script>   

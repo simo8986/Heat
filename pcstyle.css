@@ -1,0 +1,77 @@
+ #grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 4.8fr 3fr 1fr;
+        grid-template-areas:
+            "b b b"
+            "d c e"
+            "f f f"
+            "h h h";
+    }
+    
+    .billede1 {
+        grid-area: f;
+        background-image: url(billeder/groupcan.png);
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+        background-size: contain;
+        max-width: 100%;
+        height: auto;
+    }
+
+    #nav {
+        text-align: right;
+        grid-area: a;
+        font-family: 'Anton', sans-serif;
+        font-size: 30px;
+        padding: 10px;
+        height: auto;
+        background-color: transparent;
+    }
+    
+    #nav a.icon {
+        display: none;
+    }
+    
+    #nav a {
+        text-decoration: none;
+         display: inline;
+        margin-top: 0px;
+        padding: 0px;
+        width: 100px;
+        color: #000;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+        
+    }
+    
+    #nav #menupunkter {
+    display: inline;
+   
+    }
+
+    #nav a:visited {
+        color: #000;
+    }
+
+    #nav a:hover {
+        color: gray;
+        background-color: transparent;
+        }
+    
+    .fa .fa-bars {
+        display: none;
+    } 
+
+    .active {
+        display: none;
+    }
+    
+    #nav a.icon {
+        display: none;
+    }
+    
+    .scriptknap {
+        display: none;
+    }
