@@ -62,4 +62,6 @@
     color: black;
     display: none;
     height: auto;
+    font-size: 40px;
+    line-height: 50px;
 }
