@@ -9,17 +9,16 @@
         <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
-    <body>
+    <body onload="skiftInfo()">
     <div id="grid">
         <div></div>
         <nav id="nav">
             <div id="menupunkter">
                 <a href="#forside">FORSIDE</a>
-                <a href="#produkt">PRODUKT</a>
-                <a href="#forside">FORSIDE</a>
-                <a href="#produkt">PRODUKT</a>
-                <a href="#forside">FORSIDE</a>
-                <a href="#produkt">PRODUKT</a>
+                <a href="#fitnesswoman">#NUTRAGO</a>
+                <a href="#family">#FAMILYFIRST</a>
+                <a href="#business">#VISIBLEWOMEN</a>
+                <a href="#disclaimer">DISCLAIMER</a>
             </div>
            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
@@ -30,14 +29,43 @@
         <div id="purplecan"><img src="billeder/purplecan.png" onclick="skiftInfo()"></div>
         <div id="orangecan"><img src="billeder/orangecan.png" onclick="skiftInfo()">
         </div>
-        <div id="collapstekst"><h2>INDHOLD</h2> <br> <p>En helt masse info om alt muligt! </p></div>
+        <div id="collapstekst"><h2>INDHOLD</h2> <p>Heat energy indeholder en masse naturlige ingredienser og vitaminer, som kan booste din hverdag! <br> I drikken finder du blandt andet grøn te, ingefær og 8 forskellige vitaminer.<br>
+            Grøn te og ingefær kan man kun få for lidt af, da begge ingredienser styrker dit immunforsvar gevaldigt. <br>
+            Disse ingredienser sikre at du har én mindre ting at bekymre dig om i din hverdag, nemlig dit helbred. <br>
+            Dertil skal det også at drikken ikke indeholder aspartam.
+ </p></div>
     
         
         <div class="billede1"></div>
         <div class="billede2"></div> 
+        <div id="firework"></div>
         <div class="tekst1">#FEELTHEHEAT</div>
-        <div class="tekst2"></div>
-        <div class="break"></div>
+        
+            <img id="fitnesswoman" src="billeder/fitnesswoman.jpg" >
+            <p id="fitnesstekst">Er du en fighter? <br>Selvfølgelig er du det<br>Vælg dog dine kampe med omhu<br>Med Heat tager du én mindre kamp i hverdagen</p>
+        
+        <div class="tekst2">#SMILE&amp;SQUAD</div>
+        <div id="tekst3">#NUTRAGO</div>
+        
+        <img id="family" src="billeder/family.jpg">
+        <p id="familytekst">Heat<br>Giver dig tid til det der <br> virkelig betyder noget</p>
+        
+        <div id="tekst4">#NUTRAMINO</div>
+        
+        <div id="neon"></div>
+        
+        <div id="tekst5">#FAMILYFIRST</div>
+        
+        <div id="tekst6">#LIFEONTHEGO</div>
+        
+        <div id="tekst7">#VISIBLEWOMEN</div>
+        
+        <img id="business" src="billeder/businesswoman.jpg">
+        <p id="businesstekst">Tag de nemme løsninger<br> Heat giver dig et boost i din travle hverdag <br>Det giver dig mere overskud til de vigtige valg</p>
+        
+        <footer id="disclaimer">Denne hjemmeside er lavet til et skoleprojekt og er på ingen måde relateret til www.nutramino.com eller deres brand
+        <br>
+        Hilsen Simone &amp; René, Multimediedesignere Dania Skive</footer>
     </div>            
 	</body>
 </html>
@@ -58,15 +86,27 @@
        
        elemen.style.display="block";
         let elem=document.getElementById("grid");
-        elem.style.gridTemplateRows= '1fr 4fr 2fr 3fr 1fr 3fr';
-        elem.style.gridTemplateAreas='"b b b" "d c e" "k k k" "f f f" "h h h" "g g g"';
-       } else {
+       elem.style.gridTemplateRows= '150px 640px 250px 610px 150px 640px 150px 640px 150px 640px 150px 640px 150px 640px 150px 640px 150px 200px';
+        elem.style.gridTemplateAreas='"b b b" "d c e" "k k k" "f f f" "h h h" "g g g" "n n n" "m m l" "p p p" "o o o" "s s s" "q q r" "v v v" "t t t" "w w w" "y y x" "z z z" "aa aa aa"';
+       if(window.matchMedia("(max-width: 1000px)").matches) {
+           elem.style.gridTemplateRows= '150px 640px 600px 610px 150px 640px 150px 640px 150px 640px 150px 640px 150px 640px 150px 640px 150px 200px';
+       }
+       }    
+    
+            
+        else {
         let elemen=document.getElementById("collapstekst");
         elemen.style.display="none";
         let elem=document.getElementById("grid");
-        elem.style.gridTemplateRows= '1fr 4fr 3fr 1fr 3fr';
-        elem.style.gridTemplateAreas='"b b b" "d c e" "f f f" "h h h" "g g g"';
+       elem.style.gridTemplateRows= '150px 640px 610px 150px 640px 150px 640px 150px 640px 150px 640px 150px 640px 150px 640px 150px 200px';
+        elem.style.gridTemplateAreas='"b b b" "d c e" "f f f" "h h h" "g g g" "n n n" "m m l" "p p p" "o o o" "s s s" "q q r" "v v v" "t t t" "w w w" "y y x" "z z z" "aa aa aa';
        }
+    }
+    
+    skiftInfo()
+    
+    if (window.matchMedia("(min-width: 1000px)").matches) {
+        skiftInfo();
     }
     
 </script>   

@@ -1,13 +1,22 @@
  #grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 4fr 3fr 1fr 3fr;
+        grid-template-rows: 150px 640px 610px 150px 640px 150px 640px 150px 640px 150px 640px;
         grid-template-areas:
             "b b b"
             "d c e"
             "f f f"
             "h h h"
-            "g g g";
+            "g g g"
+            "n n n"
+            "m m l"
+            "p p p"
+            "o o o"
+            "v v v"
+            "t t t"
+            "w w w"
+            "y y x"
+            "z z z";
     }
     
     .billede1 {
@@ -31,6 +40,25 @@
         max-width: 100%;
         height: auto;
     }
+
+#firework {
+        grid-area: 0;
+        background-image:url(billeder/fireworks.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: contain;
+}
+
+#neon {
+        grid-area: t;
+        background-image:url(billeder/neon.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: contain;
+        max-width: 100%;
+}
 
     #nav {
         text-align: right;
@@ -89,13 +117,10 @@
     }
 
 #collapstekst {
-    grid-area: k;
-    background-color: white;
-    color: black;
-    display: none;
-    height: auto;
-    margin-left: 20px;
-    margin-right: 20px;
+   font-size: 20px;
+    line-height: 30px;
+    padding-top: 20px;
+    
 }
 
 #orangecan, #greencan, #purplecan {
@@ -114,3 +139,22 @@
     opacity: 1.0;
 }
 
+#fitnesswoman {
+    grid-area: l;
+    width: 100%;
+}
+
+#fitnesstekst {
+    grid-area: m;
+    color: white;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.tekst2 {
+    font-size: 80px;
+    text-align: center;
+    padding-top: 15px;
+}
